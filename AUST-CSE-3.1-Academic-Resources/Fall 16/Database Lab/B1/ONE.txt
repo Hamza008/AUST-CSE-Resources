@@ -1,0 +1,27 @@
+USE Name_Id
+INSERT INTO Person (PersonId, LastName, FirstName, Address, City)
+VALUES (1 , 'Tjessem', 'Jacob', 'Tejgaon', 'Dhaka');
+INSERT INTO Person (PersonId, LastName, FirstName, Address, City)
+VALUES (2 , 'Kaneki' , 'Ken' , 'Tokyo' , 'Japan');
+INSERT INTO Person (PersonId, LastName, FirstName, Address, City)
+VALUES (3 , 'Wayne' , 'Bruce' , 'Gotham' , 'America');
+INSERT INTO Person (PersonId, LastName, FirstName, Address, City)
+VALUES (4 , 'Touka' , 'Kirishima' , 'Ontario' , 'Canada');
+INSERT INTO Person (PersonId, LastName, FirstName, Address, City)
+VALUES (5 , 'Clark' , 'Kent' , 'Metro' , 'USA');
+
+SELECT * FROM Person
+SELECT DISTINCT LastName FROM Person
+SELECT DISTINCT City From Person 
+SELECT DISTINCT FirstName,City FROM Person
+SELECT * FROM Person WHERE City='Dhaka'
+SELECT * FROM Person WHERE FirstName='Ken' AND LastName='Kaneki' 
+SELECT * FROM Person WHERE FirstName='Ken' OR LastName='Wayne'
+SELECT * FROM Person WHERE FirstName='Ken' OR LastName=''
+SELECT * FROM Person WHERE (FirstName='Bruce' OR FirstName='Ken') AND (LastName='Wayne' OR LastName='Kaneki')
+ALTER TABLE Person ADD AGE int
+INSERT INTO Person (PersonId, LastName, FirstName, Address, City, AGE)
+VALUES (6 , 'Gremory' , 'SirJacks' , 'Tokyo' , 'Japan', 23);
+SELECT * FROM Person
+ALTER TABLE Person DROP COLUMN AGE
+ALTER TABLE Person ALTER COLUMN PersonId FLOAT

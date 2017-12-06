@@ -1,0 +1,82 @@
+SET A
+
+1. having clause must check values which either in group by column or in aggregate 
+function.
+
+2.DDL. 
+
+3.ONE
+
+4. TRUE
+
+5. FALSE
+
+
+Sql 1
+
+SELECT item, max(price), min(price)
+FROM items_ordered
+GROUP BY item
+HAVING max(price) > 190.00;
+
+Sql 2
+
+SELECT customerid, count(customerid), 
+FROM items_ordered
+GROUP BY customerid
+
+
+sql 3
+
+SELECT item, price
+FROM items_ordered
+WHERE price > 10.00
+ORDER BY price ASC;
+
+
+sql 4
+
+SELECT order_date, item, price
+FROM items_ordered
+WHERE price BETWEEN 10.00 AND 80.00;
+
+
+
+
+SET B
+
+1. 'computer science'
+2. B
+3. C
+4.false
+5.True
+
+sql 1
+
+select name, ID, location 
+from employee
+where City in ('London','Wales','Melbourne') and Salary >10000;
+
+
+sql 2
+
+select dept.HOD 
+from department as dept, mployee as emp
+where emp.ID=5
+and dept.ID = emp.Department_id;
+
+
+sql 3
+
+select name,department_id,department_name
+from department,employee
+where department.id = employee.department_id
+and department.department_name ='payroll';
+
+
+sql 4
+
+select city, max(salary) as totalsalary
+from table_employee
+group by city
+order by totalsalary desc // optional

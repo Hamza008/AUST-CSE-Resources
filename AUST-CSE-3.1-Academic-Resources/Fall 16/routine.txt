@@ -1,0 +1,7 @@
+routine : 
+
+5 . 3 . 17 C math 
+8 . 3 . 17 DSD 
+12. 3 . 17 Microprocessor 
+16. 3 . 17 Database 
+20. 3 . 17 HUM 

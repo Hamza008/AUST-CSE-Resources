@@ -1,0 +1,53 @@
+int segmentPins[] = {13,12,11,10,9,8,7};
+int show0[]={1,1,1,1,1,1,0,0};
+int show1[]={0,1,1,0,0,0,0,0};
+int show2[]={1,1,0,1,1,0,1,0};
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+  for(int i=0;i<7;i++)
+  {
+     pinMode(segmentPins[i], OUTPUT);
+  }
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  segmentPrint(0);
+  delay(1000);
+
+  segmentPrint(1);
+  delay(1000);
+  
+  segmentPrint(2);
+  delay(1000);
+
+}
+
+void segmentPrint(int x)
+{
+  if(x==0)
+  {
+    for(int i=0;i<7;i++)
+    {
+      digitalWrite(segmentPins[i],show0[i]);
+    }
+  }
+  else if(x==1)
+  {
+    for(int i=0;i<7;i++)
+    {
+      digitalWrite(segmentPins[i],show1[i]);
+    }
+  }
+  else if(x==2)
+  {
+    for(int i=0;i<7;i++)
+    {
+      digitalWrite(segmentPins[i],show2[i]);
+    }
+  }
+}
