@@ -1,4 +1,5 @@
-# AUST-CSE-Academic-Resources
+## AUST-CSE-Academic-Resources
+### How to Download : https://youtu.be/QrjkPPa0nVo
 
 The idea was to collect and gather all the resources of every semester of CSE Department by #RashtabMahmudShuvo Vai (GS & VP of AUST CSE 30th Batch)
 
